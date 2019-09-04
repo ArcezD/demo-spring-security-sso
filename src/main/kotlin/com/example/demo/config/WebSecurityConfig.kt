@@ -47,7 +47,7 @@ class WebSecurityConfig() : WebSecurityConfigurerAdapter() {
                 .userDnPatterns("uid={0},ou=people")
                 .groupSearchBase("ou=groups")
                 .contextSource()
-                .url("ldap://localhost:8389/dc=memorynotfound,dc=com")
+                .url("ldap://localhost:12345/dc=memorynotfound,dc=com")
                 .managerDn("uid=admin")
                 .managerPassword("secret")
                 .and()
