@@ -17,15 +17,17 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.security.oauth:spring-security-oauth2:2.3.6.RELEASE")
+	implementation("org.springframework.security:spring-security-jwt:1.0.10.RELEASE")
+	implementation("org.springframework.security:spring-security-ldap")
+	implementation("org.springframework.ldap:spring-ldap-core")
+	implementation("org.springframework.boot:spring-boot-starter-data-ldap")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-
-
-	implementation("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.7.RELEASE")
+	implementation("com.unboundid:unboundid-ldapsdk")
 	implementation("com.nimbusds:nimbus-jose-jwt:4.3.1")
-
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<KotlinCompile> {
